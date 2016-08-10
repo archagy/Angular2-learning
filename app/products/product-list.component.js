@@ -23,6 +23,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     this.pageTitle = "Product List";
                     this.imageWidth = 50;
                     this.imageMargin = 2;
+                    this.showImage = false;
                     this.products = [
                         {
                             "productId": 1,
@@ -73,9 +74,11 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                             "price": 35.95,
                             "starRating": 4.6,
                             "imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
-                        }
-                    ];
+                        }];
                 }
+                ProductListComponent.prototype.toggleImage = function () {
+                    this.showImage = !this.showImage;
+                };
                 ProductListComponent = __decorate([
                     core_1.Component({
                         selector: 'pm-products',
